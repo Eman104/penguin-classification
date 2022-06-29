@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+
+            background-color: rgb(92, 103, 117);
+            width: 1140px;
+             margin-left: auto;
+            margin-right: auto;
+            height: 80%;
+            margin-bottom:-100px ;
+
+
+        }
+
+        label {
+            font-size: 20px;
+            font-family: Arial;
+        }
+
+        .eman {
+            text-align: center;
+            width: 46%;
+            
+            background-color: rgb(139, 108, 130);
+
+            margin: 10% 20% 25% 25%;
+
+            padding-bottom: 30px;
+            padding-top: 20px;
+            box-shadow: 18px 25px 28px rgba(111, 144, 177, 0.849);
+            color: rgba(51, 52, 53, 0.849);
+        }
+        
+    
+    
+            
+
+        .input--style-4 {
+            width: 420px;
+            padding: 15px 30px;
+            margin-left: 30px;
+            background-color: rgb(159, 167, 170);
+            margin-right: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            border: 4px;
+            border-radius: 5px;
+        }
+
+        select {
+            width: 480px;
+            padding: 15px 30px;
+            background-color: rgb(159, 167, 170);
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            border: 4px;
+            border-radius: 5px;
+        }
+
+        .radio-container {
+
+            padding: 20px 30px;
+        }
+
+        p {
+            font-size: 20px;
+
+        }
+
+        .predictor {
+            width: 100px;
+            padding: 10px;
+            margin-left:20px;
+            font-size: 20px;
+            border: 4px;
+            border-radius: 5px;
+            background-color: rgb(159, 167, 170);
+        }
+        a{
+        color:black;
+        text-decoration: none;
+        width: 100px;
+            padding: 10px ;
+            margin-left: 20px;
+            font-size:  20px ;
+            border: 4px ;
+            border-radius: 5px ;
+            background-color: rgb(159, 167, 170);
+
+        }
+        img {
+            width: 250px;
+            height: 200px;
+        }
+        button:hover , a:hover {
+            background-color:rgb(92, 103, 117);
+        }
+        .k {
+        border: 0px;
+        width: 15%;
+
+        height: 1.4em;
+        background-color:green;
+
+        }
+
+
+        
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="eman">
+
+        
+        <h1>Hello again </h1>
+
+        <img src="images/ping1.png"><br><br>
+        <form action="/predict" method="GET">
+
+        <div>
+            <label class="label"><b>bill length </b></label>
+            <input class="input--style-4" type="number" name="culmen_length_mm" placeholder="bill length in mm">
+        </div>
+        <div>
+            <label class="label"><b>bill depth </b></label>
+            <input class="input--style-4" type="number" name="culmen_depth_mm" placeholder="bill depth in mm">
+        </div>
+        <div>
+            <label class="label"><b>flipper length mm</b></label>
+            <input class="input--style-4" type="number" name="flipper_length_mm" placeholder="flipper length in  mm">
+        </div>
+        <div>
+            <label class="label"><b>body mass g</b></label>
+            <input class="input--style-4" type="number" name="body_mass_g" placeholder="body mass in  gram">
+        </div>
+
+        <div class="input-group">
+            <label class="label"><b>Island</b></label>
+            <div>
+                <select name="caa">
+                    <option value="" disabled selected hidden>Please choose type...</option>
+                    <option value="0">island_Dream</option>
+                    <option value="1">island_Torgersen</option>
+                    <option value="2">island_Biscoe</option>
+                </select>
+
+            </div>
+        </div>
+
+        <label><b>Sex</b></label>
+        <div>
+            <br><label class="container ">Male
+                <input type="radio" checked="checked" name="sex_MALE" value="1" class="k">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Female
+                <input type="radio" name="sex_MALE" value="0" class="k">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+            <br>
+            <button type="submit"  class="predictor">Classify</button>
+            <button type="reset" class="predictor">Refresh</button>
+             <a href="templates/result.html" class="predictor" >Back</a>
+
+
+        </form>
+
+
+    </div>
+
+
+</body>
+
+</html>
